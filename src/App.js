@@ -1,13 +1,12 @@
-
-import "./App.css";
 import Portfolio from "./Portfolio";
-
+import Background from "./Background";
 import 'tailwindcss/tailwind.css';
 
 
 function App() {
   return (
-    <div>
+    <div >
+      <Background />
       <Portfolio />
     </div>
   );
