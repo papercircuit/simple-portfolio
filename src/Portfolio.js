@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import "tailwindcss/tailwind.css";
 import { data } from "./data";
 import Hero from "./Hero";
+import Footer from "./Footer";
+import DarkModeToggle from "./DarkModeButton";
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,33 +23,28 @@ const Portfolio = () => {
   }, [darkMode]);
 
   return (
-    <div className={`flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-800`}>
-
+    <div
+      className={`flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-800`}
+    >
       <div className="max-w-screen-lg w-full px-4">
         <div className="flex justify-between items-center py-4">
           <div className="text-gray-900 dark:text-white font-bold text-lg">
             Kenny Johnson
           </div>
-          <button
-            className="bg-gray-900 dark:bg-gray-100 text-gray-100 dark:text-gray-900 rounded-lg px-4 py-2"
-            onClick={toggleDarkMode}
-          >
-            {darkMode ? "Light" : "Dark"} Mode
-          </button>
+            <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
 
         <Hero />
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-
+        <div className="grid grid-cols-1 gap-7">
           {data.map((project) => (
             <motion.div
-              className="portfolio-item"
+              className="portfolio-item max-w-lg mx-auto"
               variants={{
                 hidden: { opacity: 0 },
                 visible: { opacity: 1 },
               }}
+              whileHover={{ scale: 1.05 }}
               key={project.id}
             >
               <div className="bg-gray-200 dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden">
@@ -84,6 +81,7 @@ const Portfolio = () => {
             </motion.div>
           ))}
         </div>
+        <Footer />
       </div>
     </div>
   );
