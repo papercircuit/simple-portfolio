@@ -24,9 +24,8 @@ const Portfolio = () => {
   }, [darkMode]);
 
   return (
-    <div
-      className={`flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-800`}
-    >
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-700 dark:to-gray-600">
+
       <div className="max-w-screen-lg w-full px-4">
         <div className="flex justify-between items-center py-4">
           <div className="text-gray-900 dark:text-white font-bold text-lg">
@@ -37,7 +36,7 @@ const Portfolio = () => {
 
         <Hero />
 
-        <div className="grid grid-cols-1 gap-7">
+        <div className="grid grid-cols-1 gap-7 my-10">
           {data.map((project) => (
             <motion.div
               className="portfolio-item max-w-lg mx-auto"

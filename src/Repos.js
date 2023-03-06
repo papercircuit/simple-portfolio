@@ -14,7 +14,7 @@ const Repos = ({ username }) => {
         `https://api.github.com/users/papercircuit/repos`
       );
       const data = await response.json();
-      setRepos(data);
+      setRepos(data.filter((repo) => !repo.fork));
     }
     fetchRepos();
   }, []);
@@ -23,27 +23,49 @@ const Repos = ({ username }) => {
     setShowMore(true);
   };
 
+  const variants = {
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+    hidden: { opacity: 0 },
+  };
+
+  const itemVariants = {
+    visible: { y: 0, opacity: 1 },
+    hidden: { y: -10, opacity: 0 },
+  };
+
   return (
-    <div>
-      <h2 className="text-3xl font-bold mb-4">My Repositories:</h2>
-      <ul className="divide-y divide-gray-300">
+    <div className="my-10 mx-5">
+      <h2 className="text-3xl font-bold mb-4">Recent Github Repos:</h2>
+      <motion.ul
+        className="divide-y divide-gray-300"
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+      >
         {repos.slice(0, reposToShow).map((repo) => (
           <motion.li
             key={repo.id}
             className="w-full py-4"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            variants={itemVariants}
           >
-            <a href={repo.html_url} className="text-blue-500 font-bold">
+            <a href={repo.html_url} className="text-blue-500 dark:text-blue-200 font-bold">
               {repo.name}
             </a>
-            <p className="text-gray-600 mt-2">{repo.description}</p>
-            <p className="text-gray-600 mt-2">
+            <p className="text-gray-600 mt-2 dark:text-gray-400">{repo.description}</p>
+            <p className="text-gray-600 mt-2 dark:text-gray-400">
               <em>{repo.language}</em>
             </p>
           </motion.li>
         ))}
-      </ul>
+      </motion.ul>
       {!showMore && repos.length > 4 && (
         <button
           onClick={handleShowMore}

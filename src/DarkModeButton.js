@@ -9,11 +9,11 @@ const DarkModeToggle = ({ isDarkMode, toggleDarkMode }) => {
       <motion.svg
         width="24"
         height="24"
-        viewBox="0 0 24 24"
+        viewBox="0 0 24 21"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         animate={{ rotate: isDarkMode ? 180 : 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
       >
         {isDarkMode ? (
           <path
