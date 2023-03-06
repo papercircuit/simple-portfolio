@@ -5,6 +5,7 @@ import { data } from "./data";
 import Hero from "./Hero";
 import Footer from "./Footer";
 import DarkModeToggle from "./DarkModeButton";
+import Repos from "./Repos";
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -81,6 +82,7 @@ const Portfolio = () => {
             </motion.div>
           ))}
         </div>
+        <Repos />
         <Footer />
       </div>
     </div>
