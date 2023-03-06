@@ -18,7 +18,7 @@ const Hero = () => {
             ease: "easeInOut",
           }}
         >
-          Hi, I'm Kenny.
+          Hi, I'm Kenny,
         </motion.h1>
         <motion.p
           className="text-lg md:text-2xl text-gray-600 dark:text-gray-400 mt-4 leading-relaxed"
@@ -30,9 +30,8 @@ const Hero = () => {
             delay: 0.2,
           }}
         >
-          I'm a full-stack web developer based in San Francisco, CA. I love
-          building beautiful, responsive websites and web applications using the
-          latest web technologies.
+            a front-end developer based in New York City. I enjoy building fast and fun websites.
+          
         </motion.p>
       </div>
     </div>
