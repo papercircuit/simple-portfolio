@@ -1,10 +1,14 @@
 import Portfolio from "./Portfolio";
 import Background from "./Background";
-import 'tailwindcss/tailwind.css';
+import "tailwindcss/tailwind.css";
+import Favicon from "./Favicon";
 
 function App() {
   return (
-    <div >
+    <div>
+      <head>
+        <Favicon />
+      </head>
       <Portfolio />
     </div>
   );
