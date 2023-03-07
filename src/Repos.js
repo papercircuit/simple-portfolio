@@ -11,8 +11,8 @@ const Repos = ({ username }) => {
   useEffect(() => {
     async function fetchRepos() {
       const response = await fetch(
-        `https://api.github.com/users/papercircuit/repos`
-      );
+        `https://api.github.com/users/papercircuit/repos?sort=created&direction=desc`
+        );
       const data = await response.json();
       setRepos(data.filter((repo) => !repo.fork));
     }
@@ -41,7 +41,9 @@ const Repos = ({ username }) => {
 
   return (
     <div className="my-10 mx-5">
-      <h2 className="text-3xl font-bold mb-4">Recent Github Repos:</h2>
+      <h2 className="text-3xl font-bold mb-4 dark:text-gray-200
+      text-gray-800
+      ">Recent Github Repos:</h2>
       <motion.ul
         className="divide-y divide-gray-300"
         variants={variants}

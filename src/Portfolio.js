@@ -4,7 +4,7 @@ import "tailwindcss/tailwind.css";
 import { data } from "./data";
 import Hero from "./Hero";
 import Footer from "./Footer";
-import DarkModeToggle from "./DarkModeButton";
+import DarkModeToggle from "./DarkModeToggle";
 import Repos from "./Repos";
 import Logo from "./Logo";
 
@@ -24,14 +24,13 @@ const Portfolio = () => {
     }
   }, [darkMode]);
 
+  
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-700 dark:to-gray-600">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-100 via-gray-300 to-gray-100 dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-700 dark:to-gray-600">
 
       <div className="max-w-screen-lg w-full px-4">
         <div className="flex justify-between items-center py-4">
-          {/* <div className="text-gray-900 dark:text-white font-bold text-lg">
-            Kenny Johnson
-          </div> */}
           <Logo darkMode={darkMode} />
 
             <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
