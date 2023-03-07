@@ -8,12 +8,11 @@ import Background from "./Background";
 import FaviconView from "./FaviconView";
 import Favicon from "./Favicon";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+
   <BrowserRouter>
     <App />
   </BrowserRouter>
-);
+
 
 function App() {
   return (

@@ -72,7 +72,7 @@ const Repos = () => {
             <p className="text-gray-600 mt-2 dark:text-gray-400">
               <em>{repo.language}</em>
               <i>
-                {repo.language.toLowerCase() == "javascript"
+                {!repo.lanugage ? "" : repo.language.toLowerCase() == "javascript"
                   ? "🍋"
                   : repo.language.toLowerCase() == "css"
                   ? "🫐"
