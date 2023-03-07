@@ -6,6 +6,7 @@ import Hero from "./Hero";
 import Footer from "./Footer";
 import DarkModeToggle from "./DarkModeButton";
 import Repos from "./Repos";
+import Logo from "./Logo";
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,9 +29,11 @@ const Portfolio = () => {
 
       <div className="max-w-screen-lg w-full px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="text-gray-900 dark:text-white font-bold text-lg">
+          {/* <div className="text-gray-900 dark:text-white font-bold text-lg">
             Kenny Johnson
-          </div>
+          </div> */}
+          <Logo darkMode={darkMode} />
+
             <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
 

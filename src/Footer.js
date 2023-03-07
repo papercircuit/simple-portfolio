@@ -10,16 +10,13 @@ const Footer = () => {
     >
       <div className="max-w-screen-lg mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <div className="text-center md:text-left">
-          <p className="text-lg font-bold dark:text-white text-gray-500">Your Company</p>
+          <p className="text-lg font-bold dark:text-white text-gray-500">Kenny Johnson</p>
           <p className="text-sm mt-2 text-gray-500">
-            123 Main Street
-            <br />
-            Anytown, USA 12345
+            New York, NY 10032
           </p>
-          <p className="text-sm mt-2 text-gray-500">contact@yourcompany.com</p>
+          <p className="text-sm mt-2 text-gray-500">kenny.johnson.nyc@gmail.com</p>
         </div>
         <div className="text-center mt-4 md:mt-0">
-          <p className="text-lg font-bold">Follow Us</p>
           <div className="flex justify-center md:justify-start mt-2">
             <a
               href="#"
@@ -80,19 +77,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="text-center md:text-right mt-4 md:mt-0">
-          <p className="text-lg font-bold">Newsletter</p>
-          <form className="mt-2 flex justify-center md:justify-end">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="rounded-l-md dark:border-gray-700 border-2 px-4 py-2 focus:outline-none focus:border-gray-500"
-            />
-            <button className="bg-gray-100 dark:text-gray-900 px-4 py-2 rounded-r-md">
-              Subscribe
-            </button>
-          </form>
-        </div>
+        
       </div>
     </motion.footer>
   );
