@@ -28,7 +28,7 @@ export const data = [
     name: "Portfolio Item 4",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris.",
-    img: "./assets/p5-bg.png",
+    img: "./src/assets/p5-bg.png",
     github: "",
   }
 ];
