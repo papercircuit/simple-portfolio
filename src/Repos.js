@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const username = "papercircuit";
-
-const Repos = ({ username }) => {
+const Repos = () => {
   const [repos, setRepos] = useState([]);
   const [showMore, setShowMore] = useState(false);
   const reposToShow = showMore ? repos.length : 4;
@@ -12,7 +10,7 @@ const Repos = ({ username }) => {
     async function fetchRepos() {
       const response = await fetch(
         `https://api.github.com/users/papercircuit/repos?sort=created&direction=desc`
-        );
+      );
       const data = await response.json();
       setRepos(data.filter((repo) => !repo.fork));
     }
@@ -41,9 +39,13 @@ const Repos = ({ username }) => {
 
   return (
     <div className="my-10 mx-5">
-      <h2 className="text-3xl font-bold mb-4 dark:text-gray-200
+      <h2
+        className="text-3xl font-bold mb-4 dark:text-gray-200
       text-gray-800
-      ">Recent Github Repos:</h2>
+      "
+      >
+        Recent Github Repos:
+      </h2>
       <motion.ul
         className="divide-y divide-gray-300"
         variants={variants}
@@ -58,12 +60,24 @@ const Repos = ({ username }) => {
             whileTap={{ scale: 0.98 }}
             variants={itemVariants}
           >
-            <a href={repo.html_url} className="text-blue-500 dark:text-blue-200 font-bold">
+            <a
+              href={repo.html_url}
+              className="text-blue-500 dark:text-blue-200 font-bold"
+            >
               {repo.name}
             </a>
-            <p className="text-gray-600 mt-2 dark:text-gray-400">{repo.description}</p>
+            <p className="text-gray-600 mt-2 dark:text-gray-400">
+              {repo.description}
+            </p>
             <p className="text-gray-600 mt-2 dark:text-gray-400">
               <em>{repo.language}</em>
+              <i>
+                {repo.language.toLowerCase() == "javascript"
+                  ? "🍋"
+                  : repo.language.toLowerCase() == "css"
+                  ? "🫐"
+                  : ""}
+              </i>
             </p>
           </motion.li>
         ))}
