@@ -1,9 +1,25 @@
 import { data } from "../data";
 import { motion } from "framer-motion";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Projects = () => {
   return (
-    <div className="grid grid-cols-1 gap-7 my-10">
+    <Carousel showArrows={true} showStatus={false} showIndicators={true} showThumbs={false} infiniteLoop={true} autoPlay={true} interval={5000} transitionTime={2000} stopOnHover={true} swipeable={true} emulateTouch={true} useKeyboardArrows={true} renderArrowPrev={(onClickHandler, hasPrev, label) => hasPrev && (
+        <button type="button" onClick={onClickHandler} title={label} className="absolute left-8 top-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
+          <svg className="w-6 h-6 text-gray-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+      )}
+      renderArrowNext={(onClickHandler, hasNext, label) => hasNext && (
+        <button type="button" onClick={onClickHandler} title={label} className="absolute right-8 top-1/2 transform -translate-y-1/2 translate-x-1/2 z-10 w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
+          <svg className="w-6 h-6 text-gray-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      )}>
+
       {data.map((project) => (
         <motion.div
           className="portfolio-item max-w-lg mx-auto"
@@ -47,7 +63,7 @@ const Projects = () => {
           </div>
         </motion.div>
       ))}
-    </div>
+    </Carousel>
   );
 };
 

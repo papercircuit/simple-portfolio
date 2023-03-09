@@ -1,9 +1,9 @@
 export const data = [
   {
     id: 1,
-    name: "Portfolio Item 1",
+    name: "React Portfolio",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris.",
+      "This portfolio was built using React, Tailwind CSS, and Framer Motion. It is fully responsive and has a dark mode toggle. I'm focusing on a clean and simple design.",
     img: "https://images.unsplash.com/photo-1655635949348-953b0e3c140a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2854&q=80",
     github: "",
   },
