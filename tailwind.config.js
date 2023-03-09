@@ -3,10 +3,15 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Google-Sans-Text', 'sans-serif'],
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
 };
+  

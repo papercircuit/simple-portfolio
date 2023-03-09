@@ -1,10 +1,10 @@
 import React from "react";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Portfolio from "./Portfolio";
-import Background from "./Background";
-import FaviconView from "./FaviconView";
-import Favicon from "./Favicon";
+import Portfolio from "./pages/Portfolio";
+import Background from "./pages/Background";
+import FaviconView from "./pages/FaviconView";
+import Favicon from "./components/Favicon";
 
 <BrowserRouter>
   <App />

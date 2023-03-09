@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
-import Hero from "./Hero";
-import Footer from "./Footer";
-import Repos from "./Repos";
-import Nav from "./Nav";
-import Projects from "./Projects";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
+import Repos from "../components/Repos";
+import Nav from "../components/Nav";
+import Projects from "../components/Projects";
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(false);

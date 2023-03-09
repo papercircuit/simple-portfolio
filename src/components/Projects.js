@@ -1,4 +1,4 @@
-import { data } from "./data";
+import { data } from "../data";
 import { motion } from "framer-motion";
 
 const Projects = () => {
