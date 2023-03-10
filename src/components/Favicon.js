@@ -28,6 +28,7 @@ const Favicon = () => {
     // Set the favicon link tag in the head of the document
     const favicon = document.querySelector('link[rel="icon"]');
     favicon.href = canvas.toDataURL();
+
   }, []);
 
   return null;
