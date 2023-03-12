@@ -31,7 +31,7 @@ const Hero = () => {
             variants={emphasisVariants}
             whileHover="hover"
           >
-            Kenny
+            <a href="https://www.linkedin.com/in/kenny-johnson-nyc/" target="_blank" rel="noreferrer">Kenny</a>
           </motion.span>
           ,
         </motion.h1>
@@ -52,7 +52,7 @@ const Hero = () => {
             variants={emphasisVariants}
             whileHover="hover"
           >
-            front-end developer
+            front-end developer,
           </motion.span>{" "}
           based in New York City. I enjoy building{" "}
           <motion.span
@@ -60,7 +60,7 @@ const Hero = () => {
             variants={emphasisVariants}
             whileHover="hover"
           >
-            fast and fun websites.
+            bold and fun websites.
           </motion.span>{" "}
         </motion.p>
       </div>

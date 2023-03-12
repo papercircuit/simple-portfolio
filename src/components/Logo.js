@@ -4,7 +4,7 @@ import KJLOGO from "../assets/KJ-1.png";
 const Logo = ({ darkMode }) => {
   return (
     <motion.div
-      className="w-40 h-20 overflow-hidden shadow-lg border-2 border-gray-300 dark:border-gray-400 bg-white relative"
+      className="w-40 h-20 overflow-hidden shadow-lg border-1 border-gray-600 dark:border-gray-300 bg-white dark:bg-grey-900 relative right-"
       whileHover={{
         scale: 1.05,
         rotate: [0, -2, 2, -2, 2, -2, 0],

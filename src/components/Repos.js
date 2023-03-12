@@ -4,22 +4,43 @@ import { motion } from "framer-motion";
 const Repos = () => {
   const [repos, setRepos] = useState([]);
   const [showMore, setShowMore] = useState(false);
+  const [sortBy, setSortBy] = useState("created"); // default sort by created date
+  const [filterBy, setFilterBy] = useState(""); // default filter by empty string
+  const [sortDirection, setSortDirection] = useState("desc"); // default sort direction descending
   const reposToShow = showMore ? repos.length : 4;
 
   useEffect(() => {
     async function fetchRepos() {
       const response = await fetch(
-        `https://api.github.com/users/papercircuit/repos?sort=created&direction=desc`
+        `https://api.github.com/users/papercircuit/repos?sort=${sortBy}&direction=${sortDirection}`
       );
       const data = await response.json();
       setRepos(data.filter((repo) => !repo.fork));
     }
     fetchRepos();
-  }, []);
+  }, [sortBy, sortDirection]);
 
   const handleShowMore = () => {
     setShowMore(true);
   };
+
+  const handleSortBy = (event) => {
+    setSortBy(event.target.value);
+  };
+
+  const handleFilterBy = (event) => {
+    setFilterBy(event.target.value);
+  };
+
+  const handleSortDirection = (event) => {
+    setSortDirection(event.target.value);
+  };
+
+  const filteredRepos = repos.filter(
+    (repo) =>
+      repo.name.toLowerCase().includes(filterBy.toLowerCase()) || // filter by name
+      repo.description.toLowerCase().includes(filterBy.toLowerCase()) // filter by description
+  );
 
   const variants = {
     visible: {
@@ -39,57 +60,85 @@ const Repos = () => {
 
   return (
     <div className="my-10 mx-5">
-      <h2
-        className="text-3xl font-bold mb-4 dark:text-gray-200
-      text-gray-800
-      "
-      >
+      <h2 className="text-3xl font-bold mb-4 dark:text-gray-200 text-gray-800">
         Recent Github Repos:
       </h2>
+      <div className="mb-4">
+        <label htmlFor="sort-by" className="mr-2">
+          Sort by:
+        </label>
+        <select id="sort-by" value={sortBy} onChange={handleSortBy}>
+          <option value="created">Created date</option>
+          <option value="updated">Last updated</option>
+        </select>
+        <label htmlFor="sort-direction" className="ml-4 mr-2">
+          Sort direction:
+        </label>
+        <select
+          id="sort-direction"
+          value={sortDirection}
+          onChange={handleSortDirection}
+        >
+          <option value="desc">Descending</option>
+          <option value="asc">Ascending</option>
+        </select>
+        <label htmlFor="filter-by" className="ml-4 mr-2">
+          Filter by:
+        </label>
+        <input
+          id="filter-by"
+          type="text"
+          value={filterBy}
+          onChange={handleFilterBy}
+        />
+      </div>
       <motion.ul
         className="divide-y divide-gray-300"
         variants={variants}
         initial="hidden"
         animate="visible"
       >
-        {repos.slice(0, reposToShow).map((repo) => (
+        {filteredRepos.slice(0, reposToShow).map((repo) => (
           <motion.li
             key={repo.id}
-            className="w-full py-4"
+            className="py-4"
+            variants={itemVariants}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            variants={itemVariants}
           >
-            <a
-              href={repo.html_url}
-              className="text-blue-500 dark:text-blue-200 font-bold"
-            >
-              {repo.name}
-            </a>
-            <p className="text-gray-600 mt-2 dark:text-gray-400">
-              {repo.description}
-            </p>
-            <p className="text-gray-600 mt-2 dark:text-gray-400">
-              <em>{repo.language}</em>
-              <i>
-                {!repo.lanugage ? "" : repo.language.toLowerCase() == "javascript"
-                  ? "🍋"
-                  : repo.language.toLowerCase() == "css"
-                  ? "🫐"
-                  : ""}
-              </i>
-            </p>
+            <div className="flex justify-between items-center">
+              <div className="flex flex-col">
+                <a
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl font-bold dark:text-gray-200 text-gray-800"
+                >
+                  {repo.name}
+                </a>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+
+                  {repo.description}
+                </p>
+              </div>
+              <div className="flex flex-col items-end">
+                <span className="text-gray-600 dark:text-gray-400 text-sm">
+                  {repo.language}
+                </span>
+              </div>
+            </div>
           </motion.li>
         ))}
       </motion.ul>
-      {!showMore && repos.length > 4 && (
+      {filteredRepos.length > 4 && !showMore && (
         <button
+          className="bg-gray-200 dark:bg-gray-800 dark:text-gray-200 text-gray-800 rounded-md px-4 py-2 mt-4"
           onClick={handleShowMore}
-          className="bg-blue-500 text-white font-bold py-2 px-4 rounded mt-4"
         >
           Show more
         </button>
       )}
+
     </div>
   );
 };
