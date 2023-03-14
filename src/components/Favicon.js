@@ -31,7 +31,7 @@ const Favicon = () => {
 
   }, []);
 
-  return null;
+  return 
 };
 
 export default Favicon;
