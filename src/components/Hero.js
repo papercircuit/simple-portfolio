@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="max-w-screen-lg w-full h-screen px-10 py-20 border-l-2 border-gray-300 dark:border-gray-600">
+    <div className="max-w-screen-lg w-full px-10 py-20">
       <div className="flex justify-between items-center">
       </div>
       <div className="mt-8">

@@ -67,7 +67,12 @@ const Repos = () => {
         <label htmlFor="sort-by" className="mr-2">
           Sort by:
         </label>
-        <select id="sort-by" value={sortBy} onChange={handleSortBy}>
+        <select
+          id="sort-by"
+          value={sortBy}
+          onChange={handleSortBy}
+          className="rounded-md text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 py-1 px-2 focus:outline-none focus:ring focus:ring-blue-300"
+        >
           <option value="created">Created date</option>
           <option value="updated">Last updated</option>
         </select>
@@ -78,19 +83,11 @@ const Repos = () => {
           id="sort-direction"
           value={sortDirection}
           onChange={handleSortDirection}
+          className="rounded-md text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 py-1 px-2 focus:outline-none focus:ring focus:ring-blue-300"
         >
           <option value="desc">Descending</option>
           <option value="asc">Ascending</option>
         </select>
-        <label htmlFor="filter-by" className="ml-4 mr-2">
-          Filter by:
-        </label>
-        <input
-          id="filter-by"
-          type="text"
-          value={filterBy}
-          onChange={handleFilterBy}
-        />
       </div>
       <motion.ul
         className="divide-y divide-gray-300"
@@ -117,7 +114,6 @@ const Repos = () => {
                   {repo.name}
                 </a>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-
                   {repo.description}
                 </p>
               </div>
@@ -138,7 +134,6 @@ const Repos = () => {
           Show more
         </button>
       )}
-
     </div>
   );
 };

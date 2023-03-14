@@ -9,25 +9,25 @@ export const data = [
   },
   {
     id: 2,
-    name: "Portfolio Item 2",
+    name: "Satellite Visualization",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris.",
+      "Built with Vanilla JS, Highcharts 3D, HTML, and CSS. This project uses the NASA API to display satellite data in a 3D environment.",
     img: "https://images.unsplash.com/photo-1655635949348-953b0e3c140a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2854&q=80",
     github: "",
   },
   {
     id: 3,
-    name: "Portfolio Item 3",
+    name: "Falling Leaves",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris.",
+      "This project uses the P5.js library to create a falling leaf animation.",
     img: "https://images.unsplash.com/photo-1655635949348-953b0e3c140a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2854&q=80",
     github: "",
   },
   {
     id: 4,
-    name: "Portfolio Item 4",
+    name: "Worm's Eye View",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris. Sed euismod, nisl nec ultricies lacinia, nunc nisl tincidunt nisl, vitae aliquam nisl nunc vel mauris.",
+      "Uses React, Firebase, and Restful to create give the user a location and time of year specific selection of plants that will grow in their area.",
     img: "./src/assets/p5-bg.png",
     github: "",
   }
