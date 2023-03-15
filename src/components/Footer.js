@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ContactForm from "./ContactForm";
 
 const Footer = () => {
   return (
@@ -14,10 +15,7 @@ const Footer = () => {
             Kenny Johnson
           </p>
           <p className="text-sm mt-2 text-gray-500">New York, NY 10032</p>
-          <p className="text-sm mt-2 text-gray-500">
-            <a href="mailto:kenny.johnson.nyc@gmail.com"></a>
-            kenny.johnson.nyc@gmail.com
-          </p>
+        <ContactForm  />
         </div>
         <div className="text-center mt-4 md:mt-0">
           <div className="flex justify-center mt-2"></div>
