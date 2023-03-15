@@ -1,45 +1,29 @@
 import { motion } from "framer-motion";
 import KJLOGO from "../assets/KJ-1.png";
+import { useEffect, useState } from "react";
 
 const Logo = ({ darkMode }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    setIsDarkMode(darkMode);
+  }, [darkMode]);
+
   return (
     <motion.div
-      className="w-40 h-20 overflow-hidden shadow-lg border-1 border-gray-600 dark:border-gray-300 bg-white dark:bg-grey-900 relative right-"
-      whileHover={{
-        scale: 1.05,
-        rotate: [0, -2, 2, -2, 2, -2, 0],
-      }}
-      whileTap={{ scale: 0.95, borderRadius: "12%" }}
-      onClick={() => {
-        window.location.reload();
-      }}
+      className={`w-40 h-20 overflow-hidden ${
+        darkMode ? "filter invert(1)" : ""
+      }`}
     >
       <motion.img
         src={KJLOGO}
         alt="KJ Logo"
         className="w-full h-full object-cover"
+        style={{ filter: darkMode ? "brightness(150%)" : "none" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       />
-      <motion.div
-        className="w-full h-full absolute top-0 left-0 border-2 border-gray-300 dark:border-gray-600"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      ></motion.div>
-      <motion.div
-        className="w-full h-full absolute top-0 left-0 border-2 border-gray-300 dark:border-gray-600"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      ></motion.div>
-      <motion.div
-        className="w-full h-full absolute top-0 left-0 border-2 border-gray-300 dark:border-gray-600"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      ></motion.div>
     </motion.div>
   );
 };

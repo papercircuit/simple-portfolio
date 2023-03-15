@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Repos from "../components/Repos";
 import Nav from "../components/Nav";
 import Projects from "../components/Projects";
+import ContactForm from "../components/ContactForm";
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -29,6 +30,7 @@ const Portfolio = () => {
         <Hero />
         <Projects />
         <Repos />
+        <ContactForm />
         <Footer />
       </div>
     </div>
