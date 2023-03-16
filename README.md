@@ -1,4 +1,4 @@
 #Professional Portfolio 
 
-Designed and built from scratch using React, Tailwind, and Framer Motion
+Built from scratch using React, Tailwind, and Framer Motion
 
