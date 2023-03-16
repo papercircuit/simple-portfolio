@@ -5,6 +5,8 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Projects = () => {
   return (
+    <div className="portfolio">
+    
     <Carousel showArrows={true} showStatus={false} showIndicators={false} showThumbs={false} infiniteLoop={true} autoPlay={false} interval={5000} transitionTime={200} stopOnHover={true} swipeable={true} emulateTouch={true} useKeyboardArrows={true} renderArrowPrev={(onClickHandler, hasPrev, label) => hasPrev && (
       <button type="button" onClick={onClickHandler} title={label} className="absolute left-8 top-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
         <svg className="w-6 h-6 text-gray-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -84,6 +86,9 @@ const Projects = () => {
         </motion.div>
       ))}
     </Carousel>
+        </div>
+ 
+
   );
 };
 
