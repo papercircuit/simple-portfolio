@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Repos from "../components/Repos";
 import Nav from "../components/Nav";
 import Projects from "../components/Projects";
+import About from "../components/About";
 
 
 const Portfolio = () => {
@@ -24,15 +25,15 @@ const Portfolio = () => {
   }, [darkMode]);
 
   return (
-    <div 
-   
-    className="flex justify-center items-center min-h-screen bg-gradient-to-br from-white-100 via-blue-400 to-gray-800 dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-700 dark:to-gray-600">
+    <div
+
+      className="flex justify-center items-center min-h-screen bg-gradient-to-br from-white-100 via-blue-400 to-gray-800 dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-700 dark:to-gray-600">
       <div className="max-w-screen-lg w-full px-4">
         <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Hero />
+        <About />
         <Projects />
         <Repos />
-      
         <Footer />
       </div>
     </div>

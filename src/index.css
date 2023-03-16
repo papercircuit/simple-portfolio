@@ -11,3 +11,8 @@
   font-display: swap;
   src: url(./fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
 }
+
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}

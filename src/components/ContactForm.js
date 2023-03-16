@@ -25,8 +25,9 @@ const ContactForm = () => {
   return (
     <>
       <button
-        className="bg-gray-500 text-white mt-4 font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+        className="bg-gray-500 text-white mt-4 font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline"
         onClick={toggleFormVisibility}
+        id="contact"
       >
         Contact Me
       </button>
@@ -86,7 +87,7 @@ const ContactForm = () => {
                 </button>
               </form>
               <motion.button
-                className="absolute top-0 right-0 mr-4 mt-4 text-gray-600 hover:text-gray-800"
+                className="absolute top-0 right-0 mr-14 mt-14 text-gray-600 hover:text-gray-800"
                 onClick={toggleFormVisibility}
                 variants={emphasisVariants}
                 whileHover="hover"

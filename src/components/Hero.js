@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "tailwindcss/tailwind.css";
+import Avatar from "../assets/kenny.jpeg";
+
 
 const Hero = () => {
   const emphasisVariants = {
@@ -19,8 +21,8 @@ const Hero = () => {
   };
 
   return (
-    <div className="max-w-screen-lg min-h-screen h-full w-full px-10 py-20 relative">
-      <div className="mt-12 relative">
+    <div className="px-10 py-40 relative flex flex-col md:flex-row md:py-10 justify-between">
+      <div className="mt-14 md:mt-2 relative">
         <motion.h1
           className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
           animate={{ opacity: 1 }}
@@ -30,10 +32,7 @@ const Hero = () => {
           }}
         >
           Hi, I'm{" "}
-          <motion.span
-            variants={emphasisVariants}
-            whileHover="hover"
-          >
+          <motion.span variants={emphasisVariants} whileHover="hover">
             <motion.a
               href="https://www.linkedin.com/in/kenny-johnson-nyc/"
               target="_blank"
@@ -74,6 +73,19 @@ const Hero = () => {
             functional and fast websites.
           </motion.span>{" "}
         </motion.p>
+      </div>
+      <div className="relative min-w-10 w-full h-[50vh] md:h-[63vh] box-shadow border-1 border-gray-700 dark:border-gray-200 rounded-sm overflow-hidden mt-6 md:mt-0 md:ml-6">
+        <motion.img
+          src={Avatar}
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut",
+            delay: 0.7,
+          }}
+        />
       </div>
     </div>
   );

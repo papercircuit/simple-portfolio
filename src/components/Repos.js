@@ -64,26 +64,26 @@ const Repos = () => {
         Recent Github Repos:
       </h2>
       <div className="mb-4">
-        <label htmlFor="sort-by" className="mr-2">
+        <label htmlFor="sort-by" className="mr-2 dark:text-gray-200 text-gray-800">
           Sort by:
         </label>
         <select
           id="sort-by"
           value={sortBy}
           onChange={handleSortBy}
-          className="rounded-md text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 py-1 px-2 focus:outline-none focus:ring focus:ring-blue-300"
+          className="rounded-md text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 py-2 px-4 focus:outline-none focus:ring focus:ring-blue-300"
         >
           <option value="created">Created date</option>
           <option value="updated">Last updated</option>
         </select>
-        <label htmlFor="sort-direction" className="ml-4 mr-2">
+        <label htmlFor="sort-direction" className="ml-4 mr-2 dark:text-gray-200 text-gray-800">
           Sort direction:
         </label>
         <select
           id="sort-direction"
           value={sortDirection}
           onChange={handleSortDirection}
-          className="rounded-md text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 py-1 px-2 focus:outline-none focus:ring focus:ring-blue-300"
+          className="rounded-md text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 py-2 px-4 focus:outline-none focus:ring focus:ring-blue-300"
         >
           <option value="desc">Descending</option>
           <option value="asc">Ascending</option>

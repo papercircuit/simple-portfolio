@@ -3,13 +3,6 @@ import ContactForm from "./ContactForm";
 
 const Footer = () => {
 
-  const emphasisVariants = {
-    hover: {
-      color: "#10B981",
-      fontWeight: "bold",
-    },
-  };
-  
   return (
     <motion.footer
       className="bg-gray-100 dark:bg-gray-800 py-10"
