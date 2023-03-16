@@ -39,7 +39,8 @@ const Hero = () => {
   }, [showAvatar]);
 
   return (
-    <div className="max-w-screen-lg w-full px-10 py-20 relative">
+    <div className="max-w-screen-lg h-full w-full px-10 py-20 relative">
+    
       <div className="flex justify-between items-center"></div>
       <div className="mt-8 relative">
         <motion.h1
