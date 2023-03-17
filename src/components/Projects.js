@@ -143,13 +143,15 @@ const Projects = () => {
                     {project.tech}
                   </motion.div>
                   <motion.div
-                    className="text-gray-600 dark:text-gray-400 text-sm"
+                    className="text-gray-600 dark:text-gray-400 text-sm py-4"
                     variants={{
                       hidden: { opacity: 0, y: 50 },
                       visible: { opacity: 1, y: 0 },
                     }}
                   >
-                    {project.link}
+                    <a href={project.link} target="_blank" rel="noreferrer">
+                      {project.link}
+                    </a>
                   </motion.div>
                 </div>
               </div>

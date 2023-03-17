@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DarkModeToggle from "./DarkModeToggle";
 import Logo from "./Logo";
+import { motion } from "framer-motion";
 
 const Nav = ({ darkMode, toggleDarkMode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -9,9 +10,19 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const hoverVariants = {
+    initial: {
+      color: "inherit",
+    },
+    hover: {
+      color: "#10B981",
+      fontSize: "calc(1rem + 0.2vw)",
+    },
+  };
+
   return (
     <div
-      className="max-w-screen-lg w-full items-center px-4 mx-auto border-b-2 dark:border-b-2 border-gray-700 dark:border-gray-300
+      className="max-w-screen-lg w-full items-center px-4 mx-auto border-b-4 dark:border-b-4 border-gray-700 dark:border-gray-300
     "
     >
       <div className="flex flex-col md:flex-row justify-between items-center py-4">
@@ -20,26 +31,32 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
         </div>
         <div className="hidden md:flex space-x-10 items-center">
           {/* Navigation links for large screens */}
-          <a
-            className="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100"
+          <motion.a
+            className="text-xl text-gray-500 dark:text-gray-300"
             href="#about"
+            variants={hoverVariants}
+            whileHover="hover"
           >
             About
-          </a>
-          <a
-            className="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100"
+          </motion.a>
+          <motion.a
+            className="text-xl text-gray-500 dark:text-gray-300"
             href="#projects"
+            variants={hoverVariants}
+            whileHover="hover"
           >
             Projects
-          </a>
-          <a
-            className="text-gray-500 dark:text-gray-300 hover:text-gray-700 hover:border-b-1 dark:hover:text-gray-100"
+          </motion.a>
+          <motion.a
+            className="text-xl text-gray-500 dark:text-gray-300"
             href="#contact"
+            variants={hoverVariants}
+            whileHover="hover"
           >
             Contact
-          </a>
+          </motion.a>
         </div>
-        <div className=" flex justify-center pb-4 md:block">
+        <div className="text-xl flex justify-center pb-4 md:block">
           <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
         <div className="w-full flex justify-center md:hidden">
@@ -53,24 +70,30 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
       {mobileMenuOpen && (
         <div className="text-center md:hidden flex flex-col space-y-2 mt-2">
           {/* Navigation links for small screens */}
-          <a
-            className="text-gray-500 px-10 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100"
+          <motion.a
+            className="text-gray-500 px-10 dark:text-gray-300"
             href="#about"
+            variants={hoverVariants}
+            whileHover="hover"
           >
             About
-          </a>
-          <a
-            className="text-gray-500 px-10 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100"
+          </motion.a>
+          <motion.a
+            className="text-gray-500 px-10 dark:text-gray-300"
             href="#projects"
+            variants={hoverVariants}
+            whileHover="hover"
           >
             Projects
-          </a>
-          <a
-            className="text-gray-500 px-10 pb-2 dark:text-gray-300 hover:text-gray-700 hover:border-b-1 dark:hover:text-gray-100"
+          </motion.a>
+          <motion.a
+            className="text-gray-500 px-10 pb-2 dark:text-gray-300"
             href="#contact"
+            variants={hoverVariants}
+            whileHover="hover"
           >
             Contact
-          </a>
+          </motion.a>
         </div>
       )}
       <div className=" flex justify-center pb-4 hidden">

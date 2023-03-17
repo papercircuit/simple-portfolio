@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="border-t-2 py-20 md:py-40 border-gray-700 dark:border-gray-200
+      className="border-t-4 py-20 md:py-40 border-gray-700 dark:border-gray-300
        "
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ const Footer = () => {
           <p className="text-lg font-bold dark:text-white text-gray-500">
             Kenny Johnson
           </p>
-          <p className="text-sm mt-2 text-gray-500">New York, NY 10032</p>
+          <p className="text-sm mt-2 text-gray-500">New York, NY</p>
         <ContactForm  />
         </div>
       </div>
