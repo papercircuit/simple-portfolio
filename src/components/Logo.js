@@ -3,6 +3,10 @@ import KJLOGO from "../assets/KJ-1.png";
 
 const Logo = ({ darkMode }) => {
 
+  function reloadPage() {
+    window.location.reload();
+  }
+
   return (
     <motion.div
       className={`w-40 h-20 overflow-hidden`}
@@ -16,6 +20,7 @@ const Logo = ({ darkMode }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        onClick={reloadPage}
       />
     </motion.div>
   );
