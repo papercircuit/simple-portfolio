@@ -47,7 +47,7 @@ const About = () => {
           initial="initial"
           animate="animate"
         >
-          I'm a front-end developer based in New York City. My journey in software began with a curiosity for how things work and a love for design. From there, I taught myself the basics and eventually went on to attend a <a href="htts://www.fullstackacademy.com">coding bootcamp</a> to formalize my education. Since then, I've been building functional and fast websites using modern technologies like React, Shopify, and TailwindCSS.
+          I'm a front-end developer based in New York City. My journey in software began with a curiosity for how things work and a love for design. From there, I taught myself some basics before attending <a href="htts://www.fullstackacademy.com">coding bootcamp</a> to formalize my education and meet others seeking similar goals. Since then, I've been building functional and fast websites using modern technologies like React, Shopify, and TailwindCSS. I am seeking full-time employment but I am also open to freelance opportunities and contract work.
         </motion.p>
         <motion.p
           className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mx-auto max-w-prose mt-4"
