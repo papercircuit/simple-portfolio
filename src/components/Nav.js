@@ -39,7 +39,9 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
             Contact
           </a>
         </div>
-
+        <div className=" flex justify-center pb-4 md:block">
+          <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        </div>
         <div className="w-full flex justify-center md:hidden">
           <button className="focus:outline-none" onClick={toggleMobileMenu}>
             <span className="block w-[24vw] h-0.5 bg-gray-500 dark:bg-gray-300"></span>
@@ -71,7 +73,7 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           </a>
         </div>
       )}
-      <div className=" flex justify-center pb-4">
+      <div className=" flex justify-center pb-4 hidden">
         <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </div>
     </div>
