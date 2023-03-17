@@ -1,11 +1,32 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import axios from "axios";
 
 const ContactForm = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
 
   const toggleFormVisibility = () => {
     setIsFormVisible(!isFormVisible);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const message = event.target.message.value;
+
+    try {
+      await axios.post("http://localhost:3001/send-email", {
+        name,
+        email,
+        message,
+      });
+      alert("Email sent successfully");
+    } catch (error) {
+      console.error("Error sending email:", error, error.response);
+      alert("Failed to send email");
+    }
   };
 
   const emphasisVariants = {
@@ -18,7 +39,6 @@ const ContactForm = () => {
       backgroundColor: "#10B981",
       color: "#10B981",
       fontWeight: "bold",
-
     },
   };
 
@@ -42,7 +62,7 @@ const ContactForm = () => {
           >
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <label
                   className="block mb-2 font-bold text-gray-800"
                   htmlFor="name"

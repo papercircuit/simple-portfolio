@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Repos = () => {
   const [repos, setRepos] = useState([]);
   const [showMore, setShowMore] = useState(false);
-  const [sortBy, setSortBy] = useState("created"); // default sort by created date
+  const [sortBy, setSortBy] = useState("updated"); // default sort by created date
   const [filterBy, setFilterBy] = useState(""); // default filter by empty string
   const [sortDirection, setSortDirection] = useState("desc"); // default sort direction descending
   const reposToShow = showMore ? repos.length : 4;
@@ -26,10 +26,6 @@ const Repos = () => {
 
   const handleSortBy = (event) => {
     setSortBy(event.target.value);
-  };
-
-  const handleFilterBy = (event) => {
-    setFilterBy(event.target.value);
   };
 
   const handleSortDirection = (event) => {
@@ -76,8 +72,8 @@ const Repos = () => {
           onChange={handleSortBy}
           className="rounded-md text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 py-2 px-4 focus:outline-none focus:ring focus:ring-blue-300"
         >
-          <option value="created">Created date</option>
           <option value="updated">Last updated</option>
+          <option value="created">Created date</option>
         </select>
         <label
           htmlFor="sort-direction"
