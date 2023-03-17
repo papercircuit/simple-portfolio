@@ -64,7 +64,10 @@ const Repos = () => {
         Recent Github Repos:
       </h2>
       <div className="mb-4">
-        <label htmlFor="sort-by" className="mr-2 dark:text-gray-200 text-gray-800">
+        <label
+          htmlFor="sort-by"
+          className="mr-2 dark:text-gray-200 text-gray-800"
+        >
           Sort by:
         </label>
         <select
@@ -76,7 +79,10 @@ const Repos = () => {
           <option value="created">Created date</option>
           <option value="updated">Last updated</option>
         </select>
-        <label htmlFor="sort-direction" className="ml-4 mr-2 dark:text-gray-200 text-gray-800">
+        <label
+          htmlFor="sort-direction"
+          className="ml-4 mr-2 dark:text-gray-200 text-gray-800"
+        >
           Sort direction:
         </label>
         <select

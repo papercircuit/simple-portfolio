@@ -10,7 +10,10 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
   };
 
   return (
-    <div className="max-w-screen-lg w-full px-4 mx-auto">
+    <div
+      className="max-w-screen-lg w-full px-4 mx-auto border-b-2 dark:border-b-2 border-gray-700 dark:border-gray-300
+    "
+    >
       <div className="flex flex-col md:flex-row justify-between items-center py-4">
         <div className="text-center mb-4 md:mb-0">
           <Logo darkMode={darkMode} />
@@ -36,18 +39,15 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
             Contact
           </a>
         </div>
-        
+
         <div className="w-full flex justify-center md:hidden">
-          <button
-            className="focus:outline-none"
-            onClick={toggleMobileMenu}
-          >
-            <span className="block w-[44vw] h-0.5 bg-gray-500 dark:bg-gray-300"></span>
-            <span className="block w-[42vw] h-0.5 bg-gray-500 dark:bg-gray-300 mt-1.5"></span>
-            <span className="block w-[40vw] h-0.5 bg-gray-500 dark:bg-gray-300 mt-1.5"></span>
+          <button className="focus:outline-none" onClick={toggleMobileMenu}>
+            <span className="block w-[24vw] h-0.5 bg-gray-500 dark:bg-gray-300"></span>
+            <span className="block w-[22vw] h-0.5 bg-gray-500 dark:bg-gray-300 mt-1.5"></span>
+            <span className="block w-[20vw] h-0.5 bg-gray-500 dark:bg-gray-300 mt-1.5"></span>
           </button>
         </div>
-        <div className="mt-10">
+        <div>
           <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
       </div>
@@ -72,7 +72,6 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           >
             Contact
           </a>
-         
         </div>
       )}
     </div>

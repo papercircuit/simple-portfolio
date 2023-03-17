@@ -31,7 +31,7 @@ const About = () => {
   };
 
   return (
-    <section className="max-w-screen-lg mx-auto px-4 pb-40 pt-20">
+    <section id="about" className="max-w-screen-lg mx-auto px-4 pb-20 pt-20">
       <div className="text-left">
         <motion.h2
           className="text-3xl font-bold text-gray-900 dark:text-white mb-4"

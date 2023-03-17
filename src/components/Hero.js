@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import "tailwindcss/tailwind.css";
 import Avatar from "../assets/kenny.jpeg";
 
-
 const Hero = () => {
   const emphasisVariants = {
     default: {
@@ -20,8 +19,18 @@ const Hero = () => {
     },
   };
 
+  const shakeVariants = {
+    hover: {
+      x: [0, -3, 3, -3, 3, 0],
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="px-10 py-40 relative flex flex-col md:flex-row md:py-10 justify-between">
+    <div className="px-10 py-0 relative flex flex-col md:flex-row md:py-20 justify-between">
       <div className="mt-14 md:mt-2 relative">
         <motion.h1
           className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
@@ -70,7 +79,7 @@ const Hero = () => {
             variants={emphasisVariants}
             whileHover="hover"
           >
-            functional and fast websites.
+            fast and functional websites.
           </motion.span>{" "}
         </motion.p>
       </div>
