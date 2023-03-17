@@ -47,7 +47,7 @@ const About = () => {
           initial="initial"
           animate="animate"
         >
-          I'm a front-end developer based in New York City. My journey in software began with a curiosity for how things work and a love for design. From there, I taught myself the basics and eventually went on to attend a coding bootcamp to formalize my education. Since then, I've been building functional and fast websites using modern technologies like React and TailwindCSS.
+          I'm a front-end developer based in New York City. My journey in software began with a curiosity for how things work and a love for design. From there, I taught myself the basics and eventually went on to attend a <a href="htts://www.fullstackacademy.com">coding bootcamp</a> to formalize my education. Since then, I've been building functional and fast websites using modern technologies like React, Shopify, and TailwindCSS.
         </motion.p>
         <motion.p
           className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mx-auto max-w-prose mt-4"
@@ -55,7 +55,7 @@ const About = () => {
           initial="initial"
           animate="animate"
         >
-          When I'm not coding, you can find me exploring the city, trying new restaurants, and watching movies.
+          When I'm not coding, you can find me exploring the city on two wheel, making music, or petting my cats.
         </motion.p>
         <motion.p
           className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mx-auto max-w-prose mt-4"
@@ -70,7 +70,7 @@ const About = () => {
             whileHover="hover"
           >
             <a
-              href="https://www.linkedin.com/in/kenny-johnson-nyc/"
+              href="mailto:kenny.johnson.nyc@gmail.com"
               target="_blank"
               rel="noreferrer"
               className="underline"
