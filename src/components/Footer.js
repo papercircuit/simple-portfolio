@@ -17,7 +17,8 @@ const Footer = () => {
             Kenny Johnson
           </p>
           <p className="text-sm mt-2 text-gray-500">New York, NY</p>
-        <ContactForm  />
+          <p className="text-sm mt-2 text-gray-500">2023</p>
+        {/* <ContactForm  /> */}
         </div>
       </div>
     </motion.footer>

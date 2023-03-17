@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DarkModeToggle from "./DarkModeToggle";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
+import Resume from "../assets/resume.pdf";
 
 const Nav = ({ darkMode, toggleDarkMode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,6 +19,10 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
       color: "#10B981",
       fontSize: "calc(1rem + 0.2vw)",
     },
+  };
+
+  const openResumeInNewTab = () => {
+    window.open(Resume, "_blank");
   };
 
   return (
@@ -49,12 +54,20 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           </motion.a>
           <motion.a
             className="text-xl text-gray-500 dark:text-gray-300"
-            href="#contact"
             variants={hoverVariants}
             whileHover="hover"
+            href="mailto:kenny.johnson.nyc@gmail.com"
           >
             Contact
           </motion.a>
+          <motion.button
+            className="text-xl text-gray-500 dark:text-gray-300"
+            variants={hoverVariants}
+            whileHover="hover"
+            onClick={openResumeInNewTab}
+          >
+            Resume
+          </motion.button>
         </div>
         <div className="text-xl flex justify-center pb-4 md:block">
           <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
@@ -94,6 +107,14 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           >
             Contact
           </motion.a>
+          <motion.button
+            className="text-xl text-gray-500 dark:text-gray-300"
+            variants={hoverVariants}
+            whileHover="hover"
+            onClick={openResumeInNewTab}
+          >
+            Resume
+          </motion.button>
         </div>
       )}
       <div className=" flex justify-center pb-4 hidden">

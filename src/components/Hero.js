@@ -31,7 +31,7 @@ const Hero = () => {
 
   return (
     <div className="px-10 pt-0 md:pt-20 relative flex flex-col md:flex-row justify-between">
-      <div className="h-full my-auto relative border-r-4 border-gray-700 dark:border-gray-300">
+      <div className="h-full my-auto relative pr-4 border-r-4 border-gray-700 dark:border-gray-300">
         <motion.h1
           className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
           animate={{ opacity: 1 }}
