@@ -11,7 +11,7 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <div
-      className="max-w-screen-lg w-full px-4 mx-auto border-b-2 dark:border-b-2 border-gray-700 dark:border-gray-300
+      className="max-w-screen-lg w-full items-center px-4 mx-auto border-b-2 dark:border-b-2 border-gray-700 dark:border-gray-300
     "
     >
       <div className="flex flex-col md:flex-row justify-between items-center py-4">
@@ -47,9 +47,6 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
             <span className="block w-[20vw] h-0.5 bg-gray-500 dark:bg-gray-300 mt-1.5"></span>
           </button>
         </div>
-        <div>
-          <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        </div>
       </div>
       {mobileMenuOpen && (
         <div className="text-center md:hidden flex flex-col space-y-2 mt-2">
@@ -74,6 +71,9 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           </a>
         </div>
       )}
+      <div className=" flex justify-center pb-4">
+        <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      </div>
     </div>
   );
 };
