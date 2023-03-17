@@ -59,7 +59,7 @@ const Repos = () => {
       <h2 className="text-3xl font-bold mb-4 dark:text-gray-200 text-gray-800">
         Recent Github Repos
       </h2>
-      <div className="mb-4">
+      <div className="mb-4 md:static flex flex-col">
         <label
           htmlFor="sort-by"
           className="mr-2 dark:text-gray-200 text-gray-800"
