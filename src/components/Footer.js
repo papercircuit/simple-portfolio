@@ -5,7 +5,8 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-gray-100 dark:bg-gray-800 py-10"
+      className="border-t-2 border-gray-700 dark:border-gray-200
+       py-10"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
