@@ -52,7 +52,7 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
         </div>
       </div>
       {mobileMenuOpen && (
-        <div className="md:hidden flex flex-col space-y-2 mt-2">
+        <div className="text-center md:hidden flex flex-col space-y-2 mt-2">
           {/* Navigation links for small screens */}
           <a
             className="text-gray-500 px-10 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100"
@@ -67,7 +67,7 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
             Projects
           </a>
           <a
-            className="text-gray-500 px-10 dark:text-gray-300 hover:text-gray-700 hover:border-b-1 dark:hover:text-gray-100"
+            className="text-gray-500 px-10 pb-2 dark:text-gray-300 hover:text-gray-700 hover:border-b-1 dark:hover:text-gray-100"
             href="#contact"
           >
             Contact
