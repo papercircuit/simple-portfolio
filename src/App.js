@@ -28,6 +28,7 @@ function App() {
       body.classList.remove("dark");
     }
   }, [darkMode]);
+  
   return (
     <div>
       <Favicon />
@@ -38,7 +39,7 @@ function App() {
         <Route exact path="/favicon-view" element={<FaviconView />} />
         <Route exact path="/about" element={<About />} />
       </Routes>
-      <Footer />
+      <Footer darkMode={darkMode} />
     </div>
   );
 }

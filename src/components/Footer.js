@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
 
-const Footer = () => {
-
+const Footer = ({ darkMode }) => {
   return (
     <motion.footer
       className="border-t-4 py-20 md:py-40 border-gray-700 dark:border-gray-300
@@ -18,7 +17,7 @@ const Footer = () => {
           </p>
           <p className="text-sm mt-2 text-gray-500">New York, NY</p>
           <p className="text-sm mt-2 text-gray-500">2023</p>
-        {/* <ContactForm  /> */}
+          {/* <ContactForm  /> */}
         </div>
       </div>
     </motion.footer>
