@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "tailwindcss/tailwind.css";
-import Avatar from "../assets/kenny.jpeg";
 
 const Hero = () => {
   const emphasisVariants = {
@@ -29,9 +28,18 @@ const Hero = () => {
     },
   };
 
+  //  scroll down smootly to the next section
+  const scrollToNextSection = () => {
+    const aboutSection = document.getElementById("projects");
+    aboutSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <div className="min-h-screen px-10 relative flex flex-col md:flex-row justify-between">
-      <div className="h-full my-auto relative pr-4 border-r-0 md:border-r-4 border-gray-700 dark:border-gray-300">
+    <div className="h-[50vh] md:min-h-[90vh] px-10 relative flex flex-col justify-between">
+      <div className="my-auto relative pr-4 border-r-0 md:border-r-4 border-gray-700 dark:border-gray-300">
         <motion.h1
           className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
           animate={{ opacity: 1 }}
@@ -83,8 +91,13 @@ const Hero = () => {
           </motion.span>{" "}
         </motion.p>
       </div>
-      
-     
+      <motion.button
+        className="text-black dark:text-gray-200 px-4 py-2 rounded-md my-8 hover:bg-gray-300 dark:hover:bg-gray-600"
+        whileHover="hover"
+        onClick={scrollToNextSection}
+      >
+        ↓
+      </motion.button>
     </div>
   );
 };
