@@ -35,8 +35,9 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <div
-      className="w-full items-center px-4 mx-auto border-b-4 dark:border-b-4 border-gray-700 dark:border-gray-300
-    "
+      className={`w-full items-center px-4 mx-auto border-b-4 border-gray-700 ${
+        darkMode ? "dark:border-b-4 dark:border-gray-300" : ""
+      } dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-700 dark:to-gray-600`}
     >
       <div className="flex flex-col md:flex-row justify-between items-center py-4">
         <div className="text-center mb-4 md:mb-0">

@@ -5,7 +5,7 @@ const Footer = ({ darkMode }) => {
   return (
     <motion.footer
       className="border-t-4 py-20 md:py-40 border-gray-700 dark:border-gray-300
-       "
+      dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 "
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

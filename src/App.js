@@ -28,9 +28,9 @@ function App() {
       body.classList.remove("dark");
     }
   }, [darkMode]);
-  
+
   return (
-    <div>
+    <div className={darkMode ? "dark" : ""}>
       <Favicon />
       <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Routes>
