@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DarkModeToggle from "./DarkModeToggle";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
@@ -25,6 +26,13 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
     window.open(Resume, "_blank");
   };
 
+  const scrollToProjects = () => {
+    const projectsElement = document.getElementById("projects");
+    if (projectsElement) {
+      projectsElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       className="w-full items-center px-4 mx-auto border-b-4 dark:border-b-4 border-gray-700 dark:border-gray-300
@@ -36,22 +44,24 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
         </div>
         <div className="hidden md:flex space-x-10 items-center">
           {/* Navigation links for large screens */}
-          <motion.a
-            className="text-xl text-gray-500 dark:text-gray-300"
-            href="/about"
-            variants={hoverVariants}
-            whileHover="hover"
-          >
-            About
-          </motion.a>
-          <motion.a
-            className="text-xl text-gray-500 dark:text-gray-300"
-            href="#projects"
-            variants={hoverVariants}
-            whileHover="hover"
-          >
-            Projects
-          </motion.a>
+          <Link to="/about">
+            <motion.div
+              className="text-xl text-gray-500 dark:text-gray-300"
+              variants={hoverVariants}
+              whileHover="hover"
+            >
+              About
+            </motion.div>
+          </Link>
+          <Link to="/" onClick={scrollToProjects}>
+            <motion.div
+              className="text-xl text-gray-500 dark:text-gray-300"
+              variants={hoverVariants}
+              whileHover="hover"
+            >
+              Projects
+            </motion.div>
+          </Link>
           <motion.a
             className="text-xl text-gray-500 dark:text-gray-300"
             variants={hoverVariants}
@@ -87,22 +97,24 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
       {mobileMenuOpen && (
         <div className="text-center md:hidden flex flex-col space-y-2 mt-2">
           {/* Navigation links for small screens */}
-          <motion.a
-            className="text-gray-500 px-10 dark:text-gray-300"
-            href="/about"
-            variants={hoverVariants}
-            whileHover="hover"
-          >
-            About
-          </motion.a>
-          <motion.a
-            className="text-gray-500 px-10 dark:text-gray-300"
-            href="#projects"
-            variants={hoverVariants}
-            whileHover="hover"
-          >
-            Projects
-          </motion.a>
+          <Link to="/about">
+            <motion.div
+              className="text-gray-500 px-10 dark:text-gray-300"
+              variants={hoverVariants}
+              whileHover="hover"
+            >
+              About
+            </motion.div>
+          </Link>
+          <Link to="/" onClick={scrollToProjects}>
+            <motion.div
+              className="text-gray-500 px-10 dark:text-gray-300"
+              variants={hoverVariants}
+              whileHover="hover"
+            >
+              Projects
+            </motion.div>
+          </Link>
           <motion.a
             className="text-gray-500 px-10 pb-2 dark:text-gray-300"
             href="mailto:kenny.johnson.nyc@gmail.com"
@@ -111,18 +123,18 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           >
             Contact
           </motion.a>
-          <motion.a
+          <motion.div
             className="text-gray-500 px-10 pb-2 dark:text-gray-300"
             variants={hoverVariants}
             whileHover="hover"
             onClick={openResumeInNewTab}
           >
             RESUME ⇣
-          </motion.a>
+          </motion.div>
         </div>
       )}
       <div className="flex justify-center pb-4 pt-2 md:hidden">
-        <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <DarkModeToggle darkMode={darkMode} toggleDark mode={toggleDarkMode} />
       </div>
     </div>
   );
