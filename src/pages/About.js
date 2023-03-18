@@ -141,7 +141,7 @@ const About = ({ darkMode }) => {
           </a>
         </div>
       </div>
-      <div className="relative flex align-center justify-middle min-w-[60%] w-xl md:w-full h-[50vh] md:h-[63vh] dark:border-gray-200 rounded-sm overflow-hidden mt-6 md:ml-6">
+      <div className="relative flex align-center px-20 justify-middle min-w-[40%] h-[50vh] md:h-[63vh] dark:border-gray-200 rounded-sm overflow-hidden mt-6 md:ml-6 ">
         <motion.img
           src={Avatar}
           className="absolute top-0 left-0 w-full h-full object-cover px-20 md:px-10"
