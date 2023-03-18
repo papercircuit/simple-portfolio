@@ -134,9 +134,12 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           </motion.div>
         </div>
       )}
-      <div className="flex justify-center pb-4 pt-2 md:hidden">
-        <DarkModeToggle darkMode={darkMode} toggleDark mode={toggleDarkMode} />
-      </div>
+     <div className="text-xl pb-4 flex justify-center md:hidden">
+            <DarkModeToggle
+              darkMode={darkMode}
+              toggleDarkMode={toggleDarkMode}
+            />
+          </div>
     </div>
   );
 };
