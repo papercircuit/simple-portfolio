@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const Repos = () => {
   const [repos, setRepos] = useState([]);
@@ -11,10 +12,10 @@ const Repos = () => {
 
   useEffect(() => {
     async function fetchRepos() {
-      const response = await fetch(
+      const response = await axios.get(
         `https://api.github.com/users/papercircuit/repos?sort=${sortBy}&direction=${sortDirection}`
       );
-      const data = await response.json();
+      const data = response.data;
       setRepos(data.filter((repo) => !repo.fork));
     }
     fetchRepos();
