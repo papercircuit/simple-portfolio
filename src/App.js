@@ -37,7 +37,7 @@ function App() {
         <Route exact path="/" element={<Portfolio />} />
         <Route exact path="/background" element={<Background />} />
         <Route exact path="/favicon-view" element={<FaviconView />} />
-        <Route exact path="/about" element={<About />} />
+        <Route exact path="/about" element={<About />} darkMode={darkMode} />
       </Routes>
       <Footer darkMode={darkMode} />
     </div>

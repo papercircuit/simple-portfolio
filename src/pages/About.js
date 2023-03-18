@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import "tailwindcss/tailwind.css";
 import Avatar from "../assets/kenny.jpeg";
 
-const About = () => {
+const About = ({ darkMode }) => {
+  const logoClasses = "text-2xl w-20 h-20 mx-2 dark:text-white text-gray-500";
+
   const textVariants = {
     initial: {
       opacity: 0,
@@ -48,7 +50,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="max-w-screen-lg mx-auto px-10 pb-20 pt-20 flex flex-col md:flex-row"
+      className="mx-auto px-10 pb-20 pt-20 flex flex-col md:flex-row dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-700 dark:to-gray-600"
     >
       <div className="text-left">
         <motion.h2
@@ -121,6 +123,23 @@ const About = () => {
           </motion.span>
           .
         </motion.p>
+        {/* Social Media Icons */}
+        <div className="mt-4 flex justify-center">
+          <a
+            href="https://github.com/paper-circuit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className={`fab fa-github ${logoClasses}`}></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kenny-johnson-nyc/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className={`fab fa-linkedin-in ${logoClasses}`}></i>
+          </a>
+        </div>
       </div>
       <div className="relative flex align-center justify-middle min-w-[60%] w-xl md:w-full h-[50vh] md:h-[63vh] dark:border-gray-200 rounded-sm overflow-hidden mt-6 md:ml-6">
         <motion.img
