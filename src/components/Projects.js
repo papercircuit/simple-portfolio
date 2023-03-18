@@ -48,7 +48,7 @@ const Projects = () => {
               type="button"
               onClick={onClickHandler}
               title={label}
-              className="absolute left-8 top-1/2 transform z-10 w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center"
+              className="absolute left-8 top-[40%] transform z-10 w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center"
             >
               <svg
                 className="w-6 h-6 text-gray-900 dark:text-white"
@@ -73,7 +73,7 @@ const Projects = () => {
               type="button"
               onClick={onClickHandler}
               title={label}
-              className="absolute right-8 top-1/2 transform  z-10 w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center"
+              className="absolute right-8 top-[40%] transform  z-10 w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center"
             >
               <svg
                 className="w-6 h-6 text-gray-900 dark:text-white"
