@@ -123,23 +123,7 @@ const About = ({ darkMode }) => {
           </motion.span>
           .
         </motion.p>
-        {/* Social Media Icons */}
-        <div className="mt-4 flex justify-center">
-          <a
-            href="https://github.com/paper-circuit"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className={`fab fa-github ${logoClasses}`}></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/kenny-johnson-nyc/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className={`fab fa-linkedin-in ${logoClasses}`}></i>
-          </a>
-        </div>
+     
       </div>
       <div className="relative flex align-center px-20 justify-middle min-w-[40%] h-[50vh] md:h-[63vh] dark:border-gray-200 rounded-sm overflow-hidden mt-6 md:ml-6 ">
         <motion.img
