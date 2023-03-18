@@ -66,13 +66,17 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
             whileHover="hover"
             onClick={openResumeInNewTab}
           >
-            Resume
+            RESUME ⇣
           </motion.button>
+          <div className="text-xl flex justify-center md:block">
+            <DarkModeToggle
+              darkMode={darkMode}
+              toggleDarkMode={toggleDarkMode}
+            />
+          </div>
         </div>
-        <div className="text-xl flex justify-center pb-4 md:block">
-          <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        </div>
-        <div className="w-full flex justify-center md:hidden">
+
+        <div className="w-full flex justify-center pb-2 md:hidden">
           <button className="focus:outline-none" onClick={toggleMobileMenu}>
             <span className="block w-[24vw] h-0.5 bg-gray-500 dark:bg-gray-300"></span>
             <span className="block w-[22vw] h-0.5 bg-gray-500 dark:bg-gray-300 mt-1.5"></span>
@@ -101,23 +105,23 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           </motion.a>
           <motion.a
             className="text-gray-500 px-10 pb-2 dark:text-gray-300"
-            href="#contact"
+            href="mailto:kenny.johnson.nyc@gmail.com"
             variants={hoverVariants}
             whileHover="hover"
           >
             Contact
           </motion.a>
-          <motion.button
-            className="text-xl text-gray-500 dark:text-gray-300"
+          <motion.a
+            className="text-gray-500 px-10 pb-2 dark:text-gray-300"
             variants={hoverVariants}
             whileHover="hover"
             onClick={openResumeInNewTab}
           >
-            Resume
-          </motion.button>
+            RESUME ⇣
+          </motion.a>
         </div>
       )}
-      <div className=" flex justify-center pb-4 hidden">
+      <div className="flex justify-center pb-4 pt-2 md:hidden">
         <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </div>
     </div>

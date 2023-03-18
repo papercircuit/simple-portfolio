@@ -84,7 +84,7 @@ const Hero = () => {
         </motion.p>
       </div>
       
-      <div className="relative min-w-40 w-xl md:w-full h-[50vh] md:h-[63vh] dark:border-gray-200 rounded-sm overflow-hidden mt-6 md:mt-0 md:ml-6">
+      <div className="relative min-w-[60%] w-xl md:w-full h-[50vh] md:h-[63vh] dark:border-gray-200 rounded-sm overflow-hidden mt-6 md:mt-0 md:ml-6">
         <motion.img
           src={Avatar}
           className="absolute top-0 left-0 w-full h-full object-cover px-20 md:px-10"
