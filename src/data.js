@@ -23,7 +23,7 @@ export const data = [
     id: 2,
     name: "Oak and Cherry",
     description:
-      "This project for my original ambient music project Oak and Cherry, uses the P5.js library to create a falling leaf animation.",
+      "This project uses P5.js to create a falling leaves effect.",
     img: leaves,
     link: "https://github.com/papercircuit/oak-and-cherry",
   },
