@@ -27,7 +27,7 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <div
-      className="max-w-screen-lg w-full items-center px-4 mx-auto border-b-4 dark:border-b-4 border-gray-700 dark:border-gray-300
+      className="w-full items-center px-4 mx-auto border-b-4 dark:border-b-4 border-gray-700 dark:border-gray-300
     "
     >
       <div className="flex flex-col md:flex-row justify-between items-center py-4">
@@ -38,7 +38,7 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           {/* Navigation links for large screens */}
           <motion.a
             className="text-xl text-gray-500 dark:text-gray-300"
-            href="#about"
+            href="/about"
             variants={hoverVariants}
             whileHover="hover"
           >
@@ -89,7 +89,7 @@ const Nav = ({ darkMode, toggleDarkMode }) => {
           {/* Navigation links for small screens */}
           <motion.a
             className="text-gray-500 px-10 dark:text-gray-300"
-            href="#about"
+            href="/about"
             variants={hoverVariants}
             whileHover="hover"
           >

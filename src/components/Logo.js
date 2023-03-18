@@ -12,6 +12,7 @@ const Logo = ({ darkMode }) => {
       className={`w-40 h-20 overflow-hidden`}
       whileTap={{ scale: 0.95 }}
     >
+      <a href="/" rel="noreferrer">
       <motion.img
         src={KJLOGO}
         alt="KJ Logo"
@@ -22,6 +23,7 @@ const Logo = ({ darkMode }) => {
         transition={{ duration: 1 }}
         onClick={reloadPage}
       />
+      </a>
     </motion.div>
   );
 };

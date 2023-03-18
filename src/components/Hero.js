@@ -30,7 +30,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="px-10 pt-10 md:pt-20 relative flex flex-col md:flex-row justify-between">
+    <div className="min-h-screen px-10 relative flex flex-col md:flex-row justify-between">
       <div className="h-full my-auto relative pr-4 border-r-0 md:border-r-4 border-gray-700 dark:border-gray-300">
         <motion.h1
           className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
@@ -84,21 +84,7 @@ const Hero = () => {
         </motion.p>
       </div>
       
-      <div className="relative min-w-[60%] w-xl md:w-full h-[50vh] md:h-[63vh] dark:border-gray-200 rounded-sm overflow-hidden mt-6 md:mt-0 md:ml-6">
-        <motion.img
-          src={Avatar}
-          className="absolute top-0 left-0 w-full h-full object-cover px-20 md:px-10"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          variants={shakeVariants} // Apply shakeVariants
-          whileHover="hover" // Add this prop
-          transition={{
-            duration: 0.5,
-            ease: "easeInOut",
-            delay: 0.7,
-          }}
-        />
-      </div>
+     
     </div>
   );
 };

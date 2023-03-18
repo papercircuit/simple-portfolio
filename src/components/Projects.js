@@ -20,7 +20,7 @@ const Projects = () => {
     },
   };
   return (
-    <div id="projects" className="max-w-screen-lg px-2">
+    <div id="projects" className="max-w-screen-lg px-10">
       <motion.h2
         className="text-3xl font-bold text-gray-900 dark:text-white mb-4"
         variants={textVariants}

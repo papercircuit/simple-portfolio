@@ -55,7 +55,7 @@ const Repos = () => {
   };
 
   return (
-    <div className="my-10 mx-5">
+    <div className="my-10 mx-5 px-10">
       <h2 className="text-3xl font-bold mb-4 dark:text-gray-200 text-gray-800">
         Recent Github Repos
       </h2>
