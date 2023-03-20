@@ -30,10 +30,10 @@ const Projects = () => {
         Current Projects
       </motion.h2>
       <Carousel
+        className="max-w-screen-lg"
         showArrows={true}
         showStatus={false}
         showIndicators={false}
-        showThumbs={false}
         infiniteLoop={true}
         autoPlay={false}
         interval={5000}
@@ -48,7 +48,7 @@ const Projects = () => {
               type="button"
               onClick={onClickHandler}
               title={label}
-              className="absolute left-8 top-[40%] transform z-10 w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center"
+              className="absolute left-8 top-[40%] transform z-10 w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center shadow-lg"
             >
               <svg
                 className="w-6 h-6 text-gray-900 dark:text-white"
@@ -73,7 +73,7 @@ const Projects = () => {
               type="button"
               onClick={onClickHandler}
               title={label}
-              className="absolute right-8 top-[40%] transform  z-10 w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center"
+              className="absolute right-8 top-[40%] transform  z-10 w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center shadow-lg"
             >
               <svg
                 className="w-6 h-6 text-gray-900 dark:text-white"
@@ -95,7 +95,8 @@ const Projects = () => {
       >
         {data.map((project) => (
           <motion.div
-            className="portfolio-item max-w-lg mx-auto"
+            className="portfolio-item max-w-lg mx-auto
+           md:py-8"
             variants={{
               hidden: { opacity: 0 },
               visible: { opacity: 1 },
@@ -104,9 +105,9 @@ const Projects = () => {
             key={project.id}
           >
             <a href={project.link} target="_blank" rel="noreferrer">
-              <div className="bg-gray-200 dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden">
+              <div className="bg-gray-100 dark:bg-gray-900">
                 <motion.img
-                  className="object-cover w-full h-auto"
+                  className="object-cover max-h-[650px] w-full"
                   src={project.img}
                   alt="portfolio item"
                   variants={{
@@ -134,13 +135,13 @@ const Projects = () => {
                     {project.description}
                   </motion.div>
                   <motion.div
-                    className="text-gray-600 dark:text-gray-400 text-sm"
+                    className="text-gray-600 dark:text-gray-400 text-sm pt-4"
                     variants={{
                       hidden: { opacity: 0, y: 50 },
                       visible: { opacity: 1, y: 0 },
                     }}
                   >
-                    {project.tech}
+                   Tech: {project.tech}
                   </motion.div>
                   <motion.div
                     className="text-gray-600 dark:text-gray-400 text-sm py-4"

@@ -18,6 +18,8 @@ export const data = [
       "Built with React, HTML, and CSS. This project uses React Hooks to increment a counter for example and (hopefully) educational purposes.",
     img: "https://github.com/papercircuit/react-hooks-counter-examples/blob/master/public/screenshot.png?raw=true",
     link: "https://github.com/papercircuit/increment-counter-using-react-hooks",
+    tech: "React, HTML, CSS"
+
   },
   {
     id: 2,
@@ -26,6 +28,7 @@ export const data = [
       "This project uses P5.js to create a falling leaves effect.",
     img: leaves,
     link: "https://github.com/papercircuit/oak-and-cherry",
+    tech: "P5.js, HTML, CSS"
   },
   {
     id: 3,
@@ -34,6 +37,7 @@ export const data = [
       "Uses React, Firebase, and multiple Restful APIs to give the user a location and time specific, selection of plants that will grow in their area.",
     img: "https://github.com/team-mind-capstone/worms-eye-view/blob/master/readmeAssets/home_plant_sug.jpg?raw=true",
     link: "https://github.com/team-mind-capstone/worms-eye-view",
+    tech: "React, Firebase, Restful APIs"
   },
   {
     id: 4,
@@ -42,5 +46,6 @@ export const data = [
       "Built with React, Framer Motion, and Tailwind CSS. This portfolio is a work in progress and will be updated as I learn more.",
     img: portfolio,
     link: "https://github.com/papercircuit/simple-portfolio",
+    tech: "React, Framer Motion, Tailwind CSS"
   },
 ];
