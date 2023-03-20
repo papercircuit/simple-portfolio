@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <div id="projects" className="max-w-screen-lg px-10">
       <motion.h2
-        className="text-3xl font-bold text-gray-900 dark:text-white mb-4"
+        className="text-3xl font-bold text-gray-900 dark:text-white mb-4 py-2 border-b-4 border-gray-700 dark:border-gray-300 mx-auto"
         variants={textVariants}
         initial="initial"
         animate="animate"

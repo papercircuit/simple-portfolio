@@ -57,7 +57,7 @@ const Repos = () => {
 
   return (
     <div className="my-10 mx-5 px-10">
-      <h2 className="text-3xl font-bold mb-4 dark:text-gray-200 text-gray-800">
+      <h2 className="text-3xl font-bold mb-4 py-2 dark:text-gray-200 text-gray-800 border-b-4 border-gray-700 dark:border-gray-300 mx-auto">
         Recent Github Repos
       </h2>
       <div className="mb-4 flex flex-col md:flex-row ">

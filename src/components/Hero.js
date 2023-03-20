@@ -92,9 +92,10 @@ const Hero = () => {
         </motion.p>
       </div>
       <motion.button
-        className="text-black dark:text-gray-200 px-4 py-2 rounded-md my-8 hover:bg-gray-300 dark:hover:bg-gray-600"
+        className="text-black text-xl dark:text-gray-200 px-4 py-2 rounded-md my-8 hover:bg-gray-300 dark:hover:bg-gray-600"
         whileHover="hover"
         onClick={scrollToNextSection}
+        variants={emphasisVariants}
       >
         ↓
       </motion.button>
