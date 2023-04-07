@@ -17,17 +17,6 @@ const Hero = () => {
     },
   };
 
-  const shakeVariants = {
-    initial: {}, // Add this line
-    hover: {
-      x: [0, -3, 3, -3, 3, 0],
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   //  scroll down smootly to the next section
   const scrollToNextSection = () => {
     const aboutSection = document.getElementById("projects");

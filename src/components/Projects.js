@@ -1,4 +1,4 @@
-import { data } from "../data";
+import { userData } from "../userData";
 import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -93,7 +93,7 @@ const Projects = () => {
           )
         }
       >
-        {data.map((project) => (
+        {userData.map((project) => (
           <motion.div
             className="portfolio-item max-w-lg mx-auto
            md:py-8"

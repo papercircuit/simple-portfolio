@@ -4,8 +4,6 @@ import "tailwindcss/tailwind.css";
 import Avatar from "../assets/kenny.jpeg";
 
 const About = ({ darkMode }) => {
-  const logoClasses = "text-2xl w-20 h-20 mx-2 dark:text-white text-gray-500";
-
   const textVariants = {
     initial: {
       opacity: 0,

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import ContactForm from "./ContactForm";
 
 const Footer = ({ darkMode }) => {
   const logoClasses = "text-2xl w-20 h-20 mx-2 dark:text-white text-gray-500";

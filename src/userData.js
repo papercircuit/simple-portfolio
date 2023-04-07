@@ -2,7 +2,7 @@ import satelliteVisualization from "./assets/gifs/satellites.gif";
 import leaves from "./assets/gifs/leaves.gif";
 import portfolio from "./assets/portfolio.png";
 
-export const data = [
+export const userData = [
   {
     id: 1,
     name: "Satellite Visualizer",
