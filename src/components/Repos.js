@@ -63,7 +63,7 @@ const Repos = () => {
       <div className="mb-4 flex flex-col md:flex-row ">
         <label
           htmlFor="sort-by"
-          className="mr-2 dark:text-gray-200 text-gray-800"
+          className="mr-2 my-auto dark:text-gray-200 text-gray-800"
         >
           Sort by:
         </label>
@@ -78,7 +78,7 @@ const Repos = () => {
         </select>
         <label
           htmlFor="sort-direction"
-          className="ml-4 mr-2 dark:text-gray-200 text-gray-800"
+          className="ml-4 my-auto mr-2 dark:text-gray-200 text-gray-800"
         >
           Sort direction:
         </label>
