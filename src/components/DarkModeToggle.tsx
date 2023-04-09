@@ -1,7 +1,13 @@
+import React from "react";
 import { motion } from "framer-motion";
 
-const DarkModeToggle = ({ isDarkMode, toggleDarkMode }) => {
-  return (
+interface DarkModeToggleProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+const DarkModeToggle: React.FC<DarkModeToggleProps> = ({ isDarkMode, toggleDarkMode }) => {
+  return(
     <button
       onClick={toggleDarkMode}
       className="flex items-center align-middle justify-center w-10 h-10 rounded-full border border-gray-400 focus:outline-none hover:bg-gray-500 dark:hover:bg-gray-500
