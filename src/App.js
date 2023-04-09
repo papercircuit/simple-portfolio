@@ -16,7 +16,8 @@ import Footer from "./components/Footer";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
+  const toggleDarkMode = (event) => {
+    event.stopPropagation();
     setDarkMode(!darkMode);
   };
 

@@ -17,17 +17,6 @@ const Hero = () => {
     },
   };
 
-  const shakeVariants = {
-    initial: {}, // Add this line
-    hover: {
-      x: [0, -3, 3, -3, 3, 0],
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   //  scroll down smoothly to the next section
   const scrollToNextSection = () => {
     const aboutSection = document.getElementById("projects");
@@ -92,9 +81,10 @@ const Hero = () => {
         </motion.p>
       </div>
       <motion.button
-        className="text-black dark:text-gray-200 px-4 py-2 rounded-md my-8 hover:bg-gray-300 dark:hover:bg-gray-600"
+        className="text-black text-xl dark:text-gray-200 px-4 py-2 rounded-md my-8 hover:bg-gray-300 dark:hover:bg-gray-600"
         whileHover="hover"
         onClick={scrollToNextSection}
+        variants={emphasisVariants}
       >
         ↓
       </motion.button>

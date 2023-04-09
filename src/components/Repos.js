@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const Repos = () => {
   const [repos, setRepos] = useState([]);
@@ -11,10 +12,10 @@ const Repos = () => {
 
   useEffect(() => {
     async function fetchRepos() {
-      const response = await fetch(
+      const response = await axios.get(
         `https://api.github.com/users/papercircuit/repos?sort=${sortBy}&direction=${sortDirection}`
       );
-      const data = await response.json();
+      const data = response.data;
       setRepos(data.filter((repo) => !repo.fork));
     }
     fetchRepos();
@@ -56,13 +57,13 @@ const Repos = () => {
 
   return (
     <div className="my-10 mx-5 px-10">
-      <h2 className="text-3xl font-bold mb-4 dark:text-gray-200 text-gray-800">
+      <h2 className="text-3xl font-bold mb-4 py-2 dark:text-gray-200 text-gray-800 border-b-4 border-gray-700 dark:border-gray-300 mx-auto">
         Recent Github Repos
       </h2>
       <div className="mb-4 flex flex-col md:flex-row ">
         <label
           htmlFor="sort-by"
-          className="mr-2 dark:text-gray-200 text-gray-800"
+          className="mr-2 my-auto dark:text-gray-200 text-gray-800"
         >
           Sort by:
         </label>
@@ -77,7 +78,7 @@ const Repos = () => {
         </select>
         <label
           htmlFor="sort-direction"
-          className="ml-4 mr-2 dark:text-gray-200 text-gray-800"
+          className="ml-4 my-auto mr-2 dark:text-gray-200 text-gray-800"
         >
           Sort direction:
         </label>

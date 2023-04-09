@@ -4,12 +4,7 @@ Built from scratch using React, Tailwind, and Framer Motion. Hosted at [kennyj.d
 
 ##Getting Started
 
-To get a local copy up and running follow these simple example steps.
-
-###Prerequisites
-
-- npm
-- node
+To get a local copy up and running follow these steps.
 
 ###Setup
 
