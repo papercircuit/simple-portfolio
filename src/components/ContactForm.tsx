@@ -1,20 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 
-const ContactForm = () => {
+const ContactForm: React.FC = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
 
   const toggleFormVisibility = () => {
     setIsFormVisible(!isFormVisible);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const message = event.target.message.value;
+    const target = event.target as typeof event.target & {
+      name: { value: string };
+      email: { value: string };
+      message: { value: string };
+    };
+
+    const name = target.name.value;
+    const email = target.email.value;
+    const message = target.message.value;
 
     try {
       await axios.post("http://localhost:3001/send-email", {

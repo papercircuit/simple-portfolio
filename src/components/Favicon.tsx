@@ -1,6 +1,6 @@
-import { useEffect, FunctionComponent } from "react";
+import { useEffect } from "react";
 
-const Favicon: FunctionComponent = () => {
+const Favicon: React.FC = () => {
   useEffect(() => {
     const canvas = document.createElement("canvas");
     canvas.width = 16;
