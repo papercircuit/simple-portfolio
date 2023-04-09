@@ -1,4 +1,5 @@
 import { userData } from "../userData";
+import React from "react";
 import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
