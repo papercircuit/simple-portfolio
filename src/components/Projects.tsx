@@ -3,7 +3,16 @@ import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const Projects = () => {
+interface Project {
+  id: number;
+  name: string;
+  description: string;
+  img: string;
+  link: string;
+  tech: string;
+}
+
+const Projects: React.FC = () => {
   const textVariants = {
     initial: {
       opacity: 0,
@@ -19,6 +28,7 @@ const Projects = () => {
       },
     },
   };
+
   return (
     <div id="projects" className="max-w-screen-lg px-10">
       <motion.h2
@@ -141,7 +151,7 @@ const Projects = () => {
                       visible: { opacity: 1, y: 0 },
                     }}
                   >
-                   Tech: {project.tech}
+                    Tech: {project.tech}
                   </motion.div>
                   <motion.div
                     className="text-gray-600 dark:text-gray-400 text-sm py-4"
