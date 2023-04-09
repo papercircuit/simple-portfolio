@@ -1,9 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 
-const Repos = () => {
-  const [repos, setRepos] = useState([]);
+interface Repo {
+  id: number;
+  name: string;
+  html_url: string;
+  description: string;
+  language: string;
+  fork: boolean;
+}
+
+const Repos: React.FC = () => {
+  const [repos, setRepos] = useState<Repo[]>([]);
   const [showMore, setShowMore] = useState(false);
   const [sortBy, setSortBy] = useState("updated"); // default sort by created date
   const [filterBy, setFilterBy] = useState(""); // default filter by empty string
@@ -15,7 +24,7 @@ const Repos = () => {
       const response = await axios.get(
         `https://api.github.com/users/papercircuit/repos?sort=${sortBy}&direction=${sortDirection}`
       );
-      const data = response.data;
+      const data: Repo[] = response.data;
       setRepos(data.filter((repo) => !repo.fork));
     }
     fetchRepos();
@@ -25,18 +34,19 @@ const Repos = () => {
     setShowMore(true);
   };
 
-  const handleSortBy = (event) => {
+  const handleSortBy = (event: ChangeEvent<HTMLSelectElement>) => {
     setSortBy(event.target.value);
   };
 
-  const handleSortDirection = (event) => {
+  const handleSortDirection = (event: ChangeEvent<HTMLSelectElement>) => {
     setSortDirection(event.target.value);
   };
 
   const filteredRepos = repos.filter(
     (repo) =>
       repo.name.toLowerCase().includes(filterBy.toLowerCase()) || // filter by name
-      repo.description.toLowerCase().includes(filterBy.toLowerCase()) // filter by description
+      (repo.description &&
+        repo.description.toLowerCase().includes(filterBy.toLowerCase())) // filter by description
   );
 
   const variants = {
