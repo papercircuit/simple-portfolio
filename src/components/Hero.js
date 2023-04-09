@@ -68,7 +68,7 @@ const Hero = () => {
             variants={emphasisVariants}
             whileHover="hover"
           >
-            front-end developer,
+            software developer,
           </motion.span>{" "}
           based in New York City. I enjoy building{" "}
           <motion.span
