@@ -17,7 +17,7 @@ const Hero = () => {
     },
   };
 
-  //  scroll down smootly to the next section
+  //  scroll down smoothly to the next section
   const scrollToNextSection = () => {
     const aboutSection = document.getElementById("projects");
     aboutSection.scrollIntoView({
@@ -30,7 +30,7 @@ const Hero = () => {
     <div className="h-[50vh] md:min-h-[90vh] px-10 relative flex flex-col justify-between">
       <div className="my-auto relative pr-4 border-r-0 md:border-r-4 border-gray-700 dark:border-gray-300">
         <motion.h1
-          className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
+          className="text-4xl mt-2 md:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
           animate={{ opacity: 1 }}
           transition={{
             duration: 0.2,
@@ -68,7 +68,7 @@ const Hero = () => {
             variants={emphasisVariants}
             whileHover="hover"
           >
-            front-end developer,
+            software developer,
           </motion.span>{" "}
           based in New York City. I enjoy building{" "}
           <motion.span

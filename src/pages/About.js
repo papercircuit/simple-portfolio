@@ -23,7 +23,7 @@ const About = ({ darkMode }) => {
   const emphasisVariants = {
     default: {
       color: "inherit",
-      fontWeight: "inherit",
+      fontWeight: "800",
     },
     hover: {
       color: "#10B981",
@@ -105,23 +105,21 @@ const About = ({ darkMode }) => {
         >
           When I'm not coding, you can find me exploring the city on two wheel,
           making music, or petting my cats. Want to work together?{" "}
-          <motion.span
-            className="cursor-pointer"
-            variants={emphasisVariants}
-            whileHover="hover"
-          >
-            <a
-              href="mailto:kenny.johnson.nyc@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              className="underline"
-            >
-              Let's chat
-            </a>
-          </motion.span>
-          .
         </motion.p>
-     
+        <motion.span
+          className="cursor-pointer"
+          variants={emphasisVariants}
+          whileHover="hover"
+        >
+          <a
+            href="mailto:kenny.johnson.nyc@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            Let's chat.
+          </a>
+        </motion.span>
       </div>
       <div className="relative flex align-center px-20 justify-middle min-w-[40%] h-[50vh] md:h-[63vh] dark:border-gray-200 rounded-sm overflow-hidden mt-6 md:ml-6 ">
         <motion.img
