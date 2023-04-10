@@ -1,6 +1,8 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
+import "devicon/devicon.min.css";
+
 
 interface Repo {
   id: number;
@@ -65,6 +67,35 @@ const Repos: React.FC = () => {
     hidden: { y: -10, opacity: 0 },
   };
 
+  const getLanguageIcon = (language: string) => {
+    if (!language) {
+      return "";
+    }
+    const languageLowerCase = language.toLowerCase();
+    switch (languageLowerCase) {
+      case "javascript":
+        return "devicon-javascript-plain";
+      case "typescript":
+        return "devicon-typescript-plain";
+      case "python":
+        return "devicon-python-plain";
+      case "html":
+        return "devicon-html5-plain";
+      case "css":
+        return "devicon-css3-plain";
+      case "java":
+        return "devicon-java-plain";
+      case "c":
+        return "devicon-c-plain";
+      case "c++":
+        return "devicon-cplusplus-plain";
+      // Add more cases for other languages you want to support
+      default:
+        return ""; // Return an empty string if the language is not supported
+    }
+  };
+
+
   return (
     <div className="my-10 mx-5 px-10">
       <h2 className="text-3xl font-bold mb-4 py-2 dark:text-gray-200 text-gray-800 border-b-4 border-gray-700 dark:border-gray-300 mx-auto">
@@ -126,14 +157,13 @@ const Repos: React.FC = () => {
                 >
                   {repo.name}
                 </a>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-sm pr-10">
                   {repo.description}
                 </p>
               </div>
-              <div className="flex flex-col items-end">
-                <span className="text-gray-600 dark:text-gray-400 text-sm">
-                  {repo.language}
-                </span>
+              <div className="flex flex-col items-end bg-black">
+               <i className={`devicon ${getLanguageIcon(repo.language)} colored text-xl`}></i>
+
               </div>
             </div>
           </motion.li>
