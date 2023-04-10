@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Portfolio from "./pages/Portfolio";
 import Background from "./pages/Background";
 import FaviconView from "./pages/FaviconView";
-import Favicon from "./components/Favicon";
+import Favicon from "./components/Favicon.tsx";
 import About from "./pages/About";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";

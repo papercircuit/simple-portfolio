@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import DarkModeToggle from "./DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle.tsx";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
 import Resume from "../assets/resume.pdf";

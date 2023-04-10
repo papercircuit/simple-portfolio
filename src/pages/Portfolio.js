@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
 import Hero from "../components/Hero";
-import Footer from "../components/Footer";
-import Repos from "../components/Repos";
-import Nav from "../components/Nav";
-import Projects from "../components/Projects";
-import About from "./About";
+import Repos from "../components/Repos.tsx";
+import Projects from "../components/Projects.tsx";
+
 
 
 const Portfolio = () => {
